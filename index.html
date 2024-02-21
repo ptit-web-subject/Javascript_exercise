@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quản lý thông tin sinh viên</title>
+        <link rel="stylesheet" href="./main.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Quản lý thông tin sinh viên</h2>
+
+            <form id="studentForm">
+                <input type="hidden" id="editIndex" value="-1">
+                
+                <label for="studentID">Mã sinh viên:</label>
+                <input type="text" id="studentID" name="studentID" required>
+
+                <label for="fullName">Họ và tên:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="dob">Ngày sinh:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="class">Lớp học:</label>
+                <input type="text" id="class" name="class" required>
+
+                <label for="gpa">Điểm GPA:</label>
+                <input type="number" id="gpa" name="gpa" min="0" max="10" step="0.01" required>
+
+                <input type="submit" id="submitButton" value="Thêm sinh viên">
+            </form>
+
+            <div class="displayTable">
+                <h2>Danh sách sinh viên</h2>
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>Mã SV</th>
+                            <th>Họ và tên</th>
+                            <th>Ngày sinh</th>
+                            <th>Lớp học</th>
+                            <th>Điểm GPA</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody">
+                    </tbody>
+                </table>
+                <p id="noStudentMessage">Không có thông tin sinh viên</p>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
