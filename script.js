@@ -39,10 +39,13 @@ class StudentManager {
 
     updateNoStudentMessage() {
         const noStudentMessage = document.getElementById('noStudentMessage');
+        const studentTable = document.getElementById('studentTable');
         if (this.students.length === 0) {
             noStudentMessage.style.display = 'block';
+            studentTable.style.display = 'none';
         } else {
             noStudentMessage.style.display = 'none';
+            studentTable.style.display = 'table';
         }
     }
 
@@ -84,7 +87,6 @@ document.getElementById('studentForm').addEventListener('submit', function(event
 
     if (studentManager.editingIndex === -1) {
         studentManager.addStudent(student);
-        console.log(student);
     } else {
         studentManager.editStudent(studentManager.editingIndex, student);
     }

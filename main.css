@@ -35,7 +35,7 @@ input[type="text"], input[type="date"], input[type="number"] {
 }
 input[type="submit"], input[type="button"] {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #00c8c4;
     color: white;
     padding: 10px;
     border: none;
@@ -62,6 +62,7 @@ input[type="submit"]:hover, input[type="button"]:hover {
     border-radius: 4px;
 }
 table {
+    display: none;
     width: 100%;
     border-collapse: collapse;
 }
